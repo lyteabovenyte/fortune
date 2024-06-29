@@ -1,0 +1,1 @@
+##### a simple docker image to save fortune quotes evert 10 second in html file
