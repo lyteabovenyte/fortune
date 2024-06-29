@@ -1,6 +1,8 @@
 ##### a simple docker image to save fortune quotes every 10 second to a html file
 
 ###### what's in there:
+##### v1: emptyDir volume.
+###### an emptyDir volume is used to share content between containers.
 - [x] a dockerfile for the fortune image to use in your k8s pod
 - [x] a bash shell script to write the quote from fortune command in /var/htdocs dir
 - [x] the yaml manifest of the pod for k8s, plus a volume called html for both the web-server nginx serves from and html-generator to write the quotes to
@@ -17,3 +19,5 @@ kubectl port-forward <your-pod-name> <your-desired-port>:80
 minikube service <your-loadbalancer-service-name>
 ```
 then you should be forwarded to you browser at the externalIP page.
+
+##### v2: gitRepo volume:
