@@ -11,3 +11,9 @@ kubectl port-forward <your-pod-name> <your-desired-port>:80
 ``` 
 - or you can also expose the pod through a service instead of port-forwarding (either LoadBalancer or NodePort)
 - [x] the yaml manifest of the type LoadBalancer service for the pods to connect. 
+###### Note:
+- if you are using [Minikube](https://minikube.sigs.k8s.io/docs/) you can examine the externalIP of your services using the command below:
+```
+minikube service <your-loadbalancer-service-name>
+```
+then you should be forwarded to you browser at the externalIP page.
