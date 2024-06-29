@@ -10,4 +10,4 @@
 kubectl port-forward <your-pod-name> <your-desired-port>:80
 ``` 
 - or you can also expose the pod through a service instead of port-forwarding (either LoadBalancer or NodePort)
-- [ ] 
+- [x] the yaml manifest of the type LoadBalancer service for the pods to connect. 
