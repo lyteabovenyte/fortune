@@ -23,3 +23,11 @@ then you should be forwarded to you browser at the externalIP page.
 ##### v2: gitRepo volume:
 ###### visit branch gitRepo of the repo
 - [x] in this branch of versioning, we have a nginx web-server that mounts the default path(/usr/share/nginx/html) to a gitRepo contianing the html pages
+
+##### v3: hostPath volume:
+###### using mongoDB database to persist JSON document in node filesystem using hostPath volume
+###### visit branch HostPath of the repo
+- create the pod from mongodb-pod-hostpath.yaml
+- execute mongodb shell using ```kubectl exec -it mongodb mongosh``` and save some json docs
+- after deleting the pod and recreating it you can see that the data is persisted in the node's filesystem
+- you can examine that by SSHing inside the node and inspect /tmp/mongodb directory.
