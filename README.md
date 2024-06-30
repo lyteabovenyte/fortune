@@ -31,3 +31,8 @@ then you should be forwarded to you browser at the externalIP page.
 - execute mongodb shell using ```kubectl exec -it mongodb mongosh``` and save some json docs
 - after deleting the pod and recreating it you can see that the data is persisted in the node's filesystem
 - you can examine that by SSHing inside the node and inspect /tmp/mongodb directory.
+
+##### v4: PV and PVC using hostpath.
+
+###### v5: StorageClass in branch StorageClass
+- provisioning PV dynamically using storage classes.
