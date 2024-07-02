@@ -41,3 +41,6 @@ then you should be forwarded to you browser at the externalIP page.
 ###### v7: talking to the APIserver using the default-token secret mounted in the curl pod.
 - certified server via ca.crt and CURL_CA_BUNDLE
 - authorization via Bearer token specifed in the /var/run/secrets/kubernetes.io/serviceaccount/token
+- adding an ambassodor pod to run kubectl proxy at port 8001 and attach to the APIserver via the main pod
+###### Note:
+- it's always a good trick to take the pod or node's metadata via **downwardAPI** and get the pod's metadata through an ambassodor pod that is running **kubectl proxy** to leave the authorization and certification of the server to that ambassodor pod.
