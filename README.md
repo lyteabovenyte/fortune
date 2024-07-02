@@ -36,3 +36,8 @@ then you should be forwarded to you browser at the externalIP page.
 
 ###### v5: StorageClass in branch StorageClass
 - provisioning PV dynamically using storage classes.
+
+###### v6: invetigating configmap and secret --> check the specified branch :-)
+###### v7: talking to the APIserver using the default-token secret mounted in the curl pod.
+- certified server via ca.crt and CURL_CA_BUNDLE
+- authorization via Bearer token specifed in the /var/run/secrets/kubernetes.io/serviceaccount/token
