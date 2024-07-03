@@ -44,3 +44,6 @@ then you should be forwarded to you browser at the externalIP page.
 - adding an ambassodor pod to run kubectl proxy at port 8001 and attach to the APIserver via the main pod
 ###### Note:
 - it's always a good trick to take the pod or node's metadata via **downwardAPI** and get the pod's metadata through an ambassodor pod that is running **kubectl proxy** to leave the authorization and certification of the server to that ambassodor pod.
+
+###### v8: deployments and updating pods with RollingUpdate strategy or canary implementation with pausing the rollout.
+- ```k rollout [status, history, undo --to-revision=, pause, resume]```
